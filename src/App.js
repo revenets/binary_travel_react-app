@@ -2,9 +2,8 @@ import './App.css';
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 
-import {Layout} from './components/base/Layout';
-
-import Trips from './components/Trips';
+import Layout from './components/base/Layout';
+import Trips from './components/Trip/Trips';
 import SignIn from './components/login/SignIn';
 import SignUp from './components/login/SignUp';
 import Bookings from './components/Booking/Bookings';
@@ -25,7 +24,7 @@ function App () {
           <Route path={SIGN_IN_ROUTE} element={<SignIn />} />
           <Route path={SIGN_UP_ROUTE} element={<SignUp />} />
           <Route path={BOOKINGS_ROUTE} element={<Bookings />} />
-          <Route path={`${TRIP_ROUTE}/:tripId`} element={<TripDetail />} />
+          <Route path={`${TRIP_ROUTE}:tripId`} element={<TripDetail />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

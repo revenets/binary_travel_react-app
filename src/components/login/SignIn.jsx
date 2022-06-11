@@ -6,6 +6,7 @@ import { SIGN_UP_ROUTE } from "../../utils/consts";
 const SignIn = () => {
 
     const handleSubmit = (event) => {
+        // validate password function
         const form = event.target.value;
         
     }
