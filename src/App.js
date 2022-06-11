@@ -8,7 +8,6 @@ import SignIn from './components/login/SignIn';
 import SignUp from './components/login/SignUp';
 import Bookings from './components/Booking/Bookings';
 import TripDetail from './components/Trip/TripDetail';
-import NotFoundPage from './components/base/NotFoundPage'
 import { MAIN_ROUTE, SIGN_IN_ROUTE, SIGN_UP_ROUTE, TRIP_ROUTE, BOOKINGS_ROUTE } from './utils/consts';
 
 function App () {
@@ -25,7 +24,7 @@ function App () {
           <Route path={SIGN_UP_ROUTE} element={<SignUp />} />
           <Route path={BOOKINGS_ROUTE} element={<Bookings />} />
           <Route path={`${TRIP_ROUTE}:tripId`} element={<TripDetail />} />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="*" element={<Trips />} />
         </Route>
       </Routes>
     </div>
