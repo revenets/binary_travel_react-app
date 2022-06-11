@@ -1,10 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { trips } from "../../data/trips";
 
-const TripDetail = () => {
+const TripDetail = ({allTrips}) => {
     const { tripId } = useParams();
-    const trip = [...trips].filter(trip => trip.id === tripId)[0];
+    const trip = [...allTrips].filter(trip => trip.id === tripId)[0];
 
     return (
         <main className="trip-page">
