@@ -7,11 +7,11 @@
 +++  2.1 - sorting by date (nearest -  far away) - DONE
 +++  2.2 - delete booking from list (press 'X') - DONE
 //========================================================================================================================================================
-3. modal window
- 3.1 - date should be later than now
- 3.2 - guests from 1 to 10 inclusive
- 3.3 - total - calculate (price * guests)
- 3.4 - close on click 'X'
++++ 3. modal window - DONE
++++  3.1 - date should be later than now - DONE
++++  3.2 - guests from 1 to 10 inclusive - DONE
++++  3.3 - total - calculate (price * guests) - DONE
++++  3.4 - close on click 'X' - DONE
 //========================================================================================================================================================
 4. filters
 
