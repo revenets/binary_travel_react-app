@@ -8,7 +8,7 @@ import {
 } from "../../utils/consts";
 
 const Header = () => {
-    const path = useLocation().pathname.substring(1);
+    const path = useLocation().pathname;
 
     const isHeaderShown = () => {
         if (path === SIGN_IN_ROUTE || path === SIGN_UP_ROUTE) {
