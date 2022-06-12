@@ -496,7 +496,9 @@ select {
 
 .trip-card__content {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 15px;
   padding: 20px 30px;
 }
