@@ -43,7 +43,7 @@ function App () {
             path={`${TRIP_ROUTE}:tripId`}
             element={<TripDetail allTrips={allTrips} />}
           />
-          <Route path="*" element={<Trips allTrips={allTrips}/>} />
+          <Route path="*" element={<Trips allTrips={allTrips} />} />
         </Route>
       </Routes>
     </div>

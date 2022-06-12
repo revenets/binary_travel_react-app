@@ -1,6 +1,6 @@
 import React from "react";
 
-const Filter = () => {
+const Filter = ({searchTitleHandler, searchDurationHandler, searchLevelHandler}) => {
     return (
         <section className="trips-filter">
             <h2 className="visually-hidden">Trips filter</h2>
@@ -11,11 +11,13 @@ const Filter = () => {
                         name="search"
                         type="search"
                         placeholder="search by title"
+                        autoComplete="off"
+                        onChange={searchTitleHandler}
                     />
                 </label>
                 <label className="select">
                     <span className="visually-hidden">Search by duration</span>
-                    <select name="duration">
+                    <select name="duration" onChange={searchDurationHandler}>
                         <option value="">duration</option>
                         <option value="0_x_5">&lt; 5 days</option>
                         <option value="5_x_10">&lt; 10 days</option>
@@ -24,7 +26,7 @@ const Filter = () => {
                 </label>
                 <label className="select">
                     <span className="visually-hidden">Search by level</span>
-                    <select name="level">
+                    <select name="level" onChange={searchLevelHandler}>
                         <option value="">level</option>
                         <option value="easy">easy</option>
                         <option value="moderate">moderate</option>
