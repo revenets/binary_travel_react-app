@@ -20,10 +20,7 @@ import {
 import {trips} from './data/trips';
 
 function App () {
-  const [isLoggedIn, setIsLoggedIn] = React.useState (true);
-  const handleLogIn = () => setIsLoggedIn (!isLoggedIn);
-
-  const [allTrips, setAllTrips] = useState ([...trips]);
+  const [allTrips, setAllTrips] = useState ([]);
   useEffect (() => {
     setAllTrips ([...trips]);
     return () => {
@@ -36,7 +33,7 @@ function App () {
       <Routes>
         <Route
           path={MAIN_ROUTE}
-          element={<Layout isLoggedIn={isLoggedIn} handleLogIn={handleLogIn} />}
+          element={<Layout />}
         >
           <Route index element={<Trips allTrips={allTrips} />} />
           <Route path={SIGN_IN_ROUTE} element={<SignIn />} />
@@ -46,7 +43,7 @@ function App () {
             path={`${TRIP_ROUTE}:tripId`}
             element={<TripDetail allTrips={allTrips} />}
           />
-          <Route path="*" element={<Trips />} />
+          <Route path="*" element={<Trips allTrips={allTrips}/>} />
         </Route>
       </Routes>
     </div>

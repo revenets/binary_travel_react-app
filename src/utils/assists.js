@@ -6,3 +6,10 @@ export function formatDate(date) {
         newDate.getFullYear(),
       ].join('.');
 }
+
+export function isPasswordValid (password) {
+    if (password.length >= 3 && password.length <= 20) {
+        return true;
+    }
+    return false;
+}
